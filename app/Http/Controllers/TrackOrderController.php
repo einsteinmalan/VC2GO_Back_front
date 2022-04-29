@@ -1,0 +1,109 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\Models\Address;
+use App\Models\Trackorder;
+use Illuminate\Http\Request;
+use App\Traits\ApiResponser;
+
+
+
+class TrackOrderController extends Controller
+{
+
+    use ApiResponser;
+
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function index()
+    {
+        return response()->json(Trackorder::get(), 200);
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        //
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\JsonResponse
+     */
+    public function store(Request $request)
+    {
+        //
+        $request->validate([
+            'order_id' => 'required',
+        ]);
+
+        $trackorder =  Trackorder::create($request->all());
+        return  response()->json(
+            $trackorder, 201
+        );
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    // public function show(Address $address)
+    public function show( $id)
+    {
+        //
+        return  Trackorder::findOrFail($id);
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\Models\Trackorder  $trackOrder
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(Trackorder $trackOrder)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  int $id
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, $id)
+    {
+
+        $trackorder = Trackorder::findOrFail($id);
+        $trackorder->update($request->all());
+        return $trackorder;
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  int $id
+     * @return int
+     */
+    public function destroy( $id)
+    {
+        //
+        $trackorder = Trackorder::findOrFail($id);
+        $trackorder->delete();
+
+        return 204;
+    }
+}

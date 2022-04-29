@@ -1,0 +1,22 @@
+[
+  '{{repeat(100, 7)}}',
+  {
+
+    id: '{{index()}}',
+     name: '{{random("Agbasrakorgloe", "Armah", "Bayad","Carp","Cassava","catfish","Gold","Haze","Mackerel","Nana-Esi","snakehead","Tilapia","Tuna","White-catfish")}}',
+    warehouse: '{{random("Accra", "Tema", "Dansoman","Takoradi","Kasoa","East Legon","Kumasi","Sunyani","Cape Coast","Obuasi")}}',
+    picture: '/',
+    description:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    price_per_kilo: '{{floating(10, 100, 2, "GHS0,0.00")}}',
+    kg_available: '{{integer(0, 200)}}',
+    warehouse_id: '{{integer(1, 10)}}',
+    isActive: '{{bool()}}',
+    fee_min: '{{floating(5, 20, 2, "GHS0,0.00")}}',
+    fee_max: '{{floating(30, 100, 2, "GHS0,0.00")}}',
+    weight_min: '{{floating(1, 10, 2, "KG0,0.00")}}',
+    weight_max: '{{floating(11, 100, 2, "KG0,0.00")}}',
+    lon: '{{floating(-20, 35, 2, "0,0.0000")}}',
+    lat: '{{floating(-10, 40, 2, "0,0.0000")}}'
+
+  }
+]

@@ -1,0 +1,46 @@
+[
+    {
+        "id": 1,
+        "location": "Malata",
+        "contact": 554039531,
+        "isActive": true,
+        "lon": -2.62,
+        "lat": 19.59
+    },
+
+    {
+        "id": 3,
+        "location": "Takoradi",
+        "contact": 274520125,
+        "isActive": true,
+        "lon": -18.42,
+        "lat": 31.25
+    },
+    {
+        "id": 4,
+        "location": "Kasoa",
+        "contact": 274520125,
+        "isActive": false,
+        "lon": -15.93,
+        "lat": -7.49
+    },
+
+    {
+        "id": 6,
+        "location": "Kumasi",
+        "contact": 554039531,
+        "isActive": true,
+        "lon": 7.15,
+        "lat": -0.51
+    },
+
+
+    {
+        "id": 10,
+        "location": "Tema",
+        "contact": 554039531,
+        "isActive": true,
+        "lon": -8.15,
+        "lat": 14.31
+    }
+]
