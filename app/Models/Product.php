@@ -151,4 +151,13 @@ class Product extends Model
     {
         return $this->belongsTo(Stockstatus::class);
     }
+
+
+    /**
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function favorites()
+    {
+        return $this->hasMany(User::class);
+    }
 }
